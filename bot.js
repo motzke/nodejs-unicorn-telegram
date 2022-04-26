@@ -37,10 +37,12 @@ function debugLength() {
 
 let current_text = "initializing....";
 setInterval(function(){
-  if (MESSAGE_QUEUE.length => 1) {
+  if (MESSAGE_QUEUE.length > 1) {
     current_text = MESSAGE_QUEUE[0];
     MESSAGE_QUEUE = MESSAGE_QUEUE.slice(1);
     displayMessage(current_text);
+  } else if (MESSAGE_QUEUE.length == 1) {
+    current_text = MESSAGE_QUEUE.pop();    
   } else {
     debugLength();
   }
