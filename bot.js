@@ -26,7 +26,7 @@ bot.on('text', (ctx) => {
 })
 
 function displayMessage(text) {
-  unicorn.scrollText(text, 100, true);
+  unicorn.scrollText(text);
   console.log(text, MESSAGE_QUEUE.length);
 }
 
