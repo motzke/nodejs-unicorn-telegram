@@ -1,0 +1,29 @@
+{
+  "name": "unicorn-telegram",
+  "version": "1.0.0",
+  "description": "A nodejs client for telegram that displays messages on a unicorn hat mini",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'ok'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motzke/nodejs-unicorn-telegram.git"
+  },
+  "keywords": [
+    "telegram",
+    "node",
+    "unicorn",
+    "raspberry"
+  ],
+  "author": "Matthias Motzke <matthias@m0tz.de>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/motzke/nodejs-unicorn-telegram/issues"
+  },
+  "homepage": "https://github.com/motzke/nodejs-unicorn-telegram#readme",
+  "devDependencies": {
+    "input": "^1.0.1",
+    "telegram": "^2.6.13"
+  }
+}
