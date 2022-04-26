@@ -6,3 +6,8 @@ let settings = {
   "apiId" : "123456",
   "apiHash" : "123456abcdfg"
 };
+
+
+https://github.com/gram-js/gramjs
+https://github.com/yagop/node-telegram-bot-api
+https://github.com/telegraf/telegraf
