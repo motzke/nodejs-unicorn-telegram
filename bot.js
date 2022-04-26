@@ -23,6 +23,7 @@ bot.on('text', (ctx) => {
   //ctx.reply(`Hello ${ctx.state.role}`)
 
   MESSAGE_QUEUE.push(ctx.update.message.text);
+  console.log(`puhsed ${ctx.update.message.text} to queue of length ${MESSAGE_QUEUE.length} `);
 })
 
 function displayMessage(text) {
