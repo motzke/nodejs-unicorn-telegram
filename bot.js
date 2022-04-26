@@ -44,6 +44,7 @@ setInterval(function(){
     displayMessage(current_text);
   } else if (MESSAGE_QUEUE.length == 1) {
     current_text = MESSAGE_QUEUE.pop();
+    displayMessage(current_text);
   } else {
     debugLength();
   }
