@@ -7,7 +7,7 @@ const MAX_QUEUE_LENGTH = -1; // -1 for infinity
 const DISPLAY_TIMEOUT = 5000; // in ms
 let MESSAGE_QUEUE = [];
 
-//let unicorn = new UNICORN();
+let unicorn = new UNICORN();
 const bot = new Telegraf(settings.botAuthToken)
 
 bot.start((ctx) => ctx.reply('Welcome'))
@@ -23,10 +23,10 @@ bot.on('text', (ctx) => {
   //ctx.reply(`Hello ${ctx.state.role}`)
 
   MESSAGE_QUEUE.push(ctx.update.message.text);
-  //unicorn.scrollText(ctx.update.message.text);
 })
 
 function displayMessage(text) {
+  unicorn.scrollText(text, 100, true);
   console.log(text, MESSAGE_QUEUE.length);
 }
 
