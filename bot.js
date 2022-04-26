@@ -4,7 +4,7 @@ const settings = require('./settings')
 
 const MAX_MESSAGE_LENGTH = -1; // -1  for infinite
 const MAX_QUEUE_LENGTH = -1; // -1 for infinity
-const DISPLAY_TIMEOUT = 5000; // in ms
+const DISPLAY_TIMEOUT = 2000; // in ms
 let MESSAGE_QUEUE = [];
 
 let unicorn = new UNICORN();
@@ -27,6 +27,7 @@ bot.on('text', (ctx) => {
 })
 
 function displayMessage(text) {
+  text = `   ${text}`;
   unicorn.scrollText(text);
   console.log(text, MESSAGE_QUEUE.length);
 }
@@ -35,14 +36,14 @@ function debugLength() {
   console.error(MESSAGE_QUEUE.length);
 }
 
-let current_text = "initializing....";
+let current_text = "";
 setInterval(function(){
   if (MESSAGE_QUEUE.length > 1) {
     current_text = MESSAGE_QUEUE[0];
     MESSAGE_QUEUE = MESSAGE_QUEUE.slice(1);
     displayMessage(current_text);
   } else if (MESSAGE_QUEUE.length == 1) {
-    current_text = MESSAGE_QUEUE.pop();    
+    current_text = MESSAGE_QUEUE.pop();
   } else {
     debugLength();
   }
