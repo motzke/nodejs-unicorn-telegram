@@ -5,8 +5,7 @@
  */
 
  let settings = {
-   "apiId" : "123456",
-   "apiHash" : "123456abcdfg"
+   "botAuthToken" : "123456:abcdefghijklmnopqrst"
  };
 
 //  --------------------------------------------------------------------------------
