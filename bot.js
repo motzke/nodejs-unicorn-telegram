@@ -33,7 +33,7 @@ function displayMessage(text) {
 }
 
 function debugLength() {
-  console.error(MESSAGE_QUEUE.length);
+  console.error(`Queue has a length of ${MESSAGE_QUEUE.length}`);
 }
 
 let current_text = "";
