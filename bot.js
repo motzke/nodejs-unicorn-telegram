@@ -38,7 +38,10 @@ function debugLength() {
 
 let current_text = "";
 setInterval(function(){
-  if (MESSAGE_QUEUE.length > 1) {
+  if (unicorn.busy) {
+    console.error("busy...");
+    debugLength();
+  } else if (MESSAGE_QUEUE.length > 1) {
     current_text = MESSAGE_QUEUE[0];
     MESSAGE_QUEUE = MESSAGE_QUEUE.slice(1);
     displayMessage(current_text);
