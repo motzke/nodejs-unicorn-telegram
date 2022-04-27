@@ -4,7 +4,7 @@ const settings = require('./settings')
 
 const MAX_MESSAGE_LENGTH = -1; // -1  for infinite
 const MAX_QUEUE_LENGTH = -1; // -1 for infinity
-const DISPLAY_TIMEOUT = 2000; // in ms
+const DISPLAY_TIMEOUT = 500; // in ms
 let MESSAGE_QUEUE = [];
 
 let unicorn = new UNICORN();
