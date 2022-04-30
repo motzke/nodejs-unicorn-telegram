@@ -10,6 +10,8 @@ let MESSAGE_QUEUE = [];
 let unicorn = new UNICORN();
 const bot = new Telegraf(settings.botAuthToken)
 
+MESSAGE_QUEUE.push("Welcome to unicorn-telegram ...");
+
 bot.start((ctx) => ctx.reply('Welcome'))
 //bot.help((ctx) => ctx.reply('Send me a sticker'))
 //bot.on('sticker', (ctx) => ctx.reply('👍'))
